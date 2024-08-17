@@ -10,4 +10,4 @@
 * Verbatim 6.0.0
 
 ## Credits
-* Thanks to Truf for creating and providing the original "InvisibilityOn" and "InvisibilityOnFast" macros the invisibility mode component of this macro is based on.
+* Thanks to Truf for creating and providing the original "InvisibilityOn" and "InvisibilityOnFast" macros the invisibility mode component of this macro is based on. You can find Truf's macros in [this post](https://debate-decoded.ghost.io/leveling-up-verbatim/) on [his website](https://debate-decoded.ghost.io/).
