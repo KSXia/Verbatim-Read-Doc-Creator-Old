@@ -1,7 +1,7 @@
 ' <<Read Doc Creator v1.0.0>>
-' Basic Edition: This edition of the Read Doc Creator only creates the read doc and does not having mechanisms regarding the saving of the read doc.
+' Title Copier Edition: This edition of the Read Doc Creator creates the read doc and copies the formatted name of the read doc into the clipboard, but it does not automatically save the read doc.
 ' This macro consists of 6 sub procedures.
-' https://github.com/KSXia/Verbatim-Read-Doc-Creator
+' https://github.com/KSXia/Verbatim-Read-Doc-Creator/tree/Title-Copier-Edition
 ' Created on 2024-08-16.
 ' Thanks to Truf for creating and providing the original code for activating invisibility mode!
 
@@ -112,6 +112,18 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	ElseIf EnableInvisibilityMode Then
 		Call EnableDestructiveInvisibilityMode(ReadDoc, False)
 	End If
+	
+	' ---READ DOCUMENT TITLE COPIER---
+	Dim ClipboardText As DataObject
+	
+	' Set a variable to be the name of the read doc
+	Dim ReadDocName As String
+	ReadDocName = Left(OriginalDocName, Len(OriginalDocName) - 5) & " [R]"
+	
+	' Put the formatted name of the read doc into the clipboard
+	Set ClipboardText = New DataObject
+	ClipboardText.SetText ReadDocName
+	ClipboardText.PutInClipboard
 	
 	' ---FINAL PROCESSES---
 	' Re-enable screen updating and alerts
