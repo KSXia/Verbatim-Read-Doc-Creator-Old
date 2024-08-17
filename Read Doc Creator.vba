@@ -1,7 +1,7 @@
 ' <<Read Doc Creator v1.0.0>>
-' Basic Edition: This edition of the Read Doc Creator only creates the read doc and does not having mechanisms regarding the saving of the read doc.
+' Automatic Saving Edition: This edition of the Read Doc Creator only creates the read doc and automatically saves the read doc.
 ' This macro consists of 6 sub procedures.
-' https://github.com/KSXia/Verbatim-Read-Doc-Creator
+' https://github.com/KSXia/Verbatim-Read-Doc-Creator/tree/Automatic-Saving-Edition
 ' Created on 2024-08-16.
 ' Thanks to Truf for creating and providing the original code for activating invisibility mode!
 
@@ -11,6 +11,8 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	Dim DeleteForReferenceHighlightingInInvisibilityMode As Boolean
 	Dim DeleteForReferenceCardHighlightingInNormalMode As Boolean
 	Dim ForReferenceHighlightingColor As String
+	
+	Dim AutomaticallyCloseReadDoc As Boolean
 	
 	' ---USER CUSTOMIZATION---
 	' <<SET THE STYLES TO DELETE HERE!>>
@@ -34,6 +36,10 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	' Third row: Dark Red, Dark Yellow, Dark Gray, Light Gray, Black
 	' MAKE SURE TO USE THIS EXACT CAPITALIZATION AND SPELLING!
 	ForReferenceHighlightingColor = "Light Gray"
+	
+	' <<SET WHETHER TO AUTOMATICALLY CLOSE THE READ DOC AFTER IT'S CREATED AND SAVED HERE!>>
+	' If AutomaticallyCloseReadDoc is set to True, the read doc will be automatically closed after it is created and saved.
+	AutomaticallyCloseReadDoc = False
 	
 	' ---INITIAL VARIABLE SETUP---
 	Dim OriginalDoc As Document
@@ -111,6 +117,16 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 		Call EnableDestructiveInvisibilityMode(ReadDoc, True)
 	ElseIf EnableInvisibilityMode Then
 		Call EnableDestructiveInvisibilityMode(ReadDoc, False)
+	End If
+	
+	' ---SAVING THE READ DOC---
+	Dim SavePath As String
+	SavePath = OriginalDoc.Path & "\" & Left(OriginalDocName, Len(OriginalDocName) - 5) & " [R]" & ".docx"
+	ReadDoc.SaveAs2 Filename:=SavePath, FileFormat:=wdFormatDocumentDefault
+	
+	If AutomaticallyCloseReadDoc Then
+		ReadDoc.Close SaveChanges:=wdSaveChanges
+		MsgBox "The read doc is saved at " & SavePath, Title="Successfully Created and Saved Read Doc"
 	End If
 	
 	' ---FINAL PROCESSES---
