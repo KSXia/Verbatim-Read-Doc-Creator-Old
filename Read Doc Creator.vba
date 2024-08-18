@@ -136,7 +136,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 End Sub
 
 ' Sub procedure 2 of 6: Invisibility Mode Enabler
-' Thanks to Truf for creating and providing the original code for activating invisibility mode! This sub procedure is based on Truf's "InvisibilityOn" and "InvisibilityOnFast" sub procedures.
+' Thanks to Truf for creating and providing the original code for activating invisibility mode! This sub procedure is based on Truf's "InvisibilityOn" and "InvisibilityOnFast" sub procedures. You can find Truf's macros on his website at https://debate-decoded.ghost.io/leveling-up-verbatim/
 Sub EnableDestructiveInvisibilityMode(TargetDoc As Document, UseFastMode As Boolean)
 	' Move the cursor to the beginning of the document
 	TargetDoc.Content.Select
