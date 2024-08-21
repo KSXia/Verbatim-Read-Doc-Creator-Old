@@ -1,4 +1,4 @@
-' <<Read Doc Creator v1.0.0>>
+' ---Read Doc Creator v1.0.0---
 ' Title Copier Edition: This edition of the Read Doc Creator creates the read doc and copies the formatted name of the read doc into the clipboard, but it does not automatically save the read doc.
 ' This macro consists of 6 sub procedures.
 ' https://github.com/KSXia/Verbatim-Read-Doc-Creator/tree/Title-Copier-Edition
