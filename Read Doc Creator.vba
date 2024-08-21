@@ -1,4 +1,4 @@
-' <<Read Doc Creator v1.0.0>>
+' ---Read Doc Creator v1.0.0---
 ' Basic Edition: This edition of the Read Doc Creator only creates the read doc and does not having mechanisms regarding the saving of the read doc.
 ' This macro consists of 6 sub procedures.
 ' https://github.com/KSXia/Verbatim-Read-Doc-Creator
