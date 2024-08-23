@@ -2,7 +2,7 @@
 ' Updated on 2024-08-23.
 ' Basic Edition: This edition of the Read Doc Creator only creates the read doc and does not have any mechanisms regarding the saving of the read doc.
 ' This macro consists of 6 sub procedures.
-' https://github.com/KSXia/Verbatim-Read-Doc-Creator
+' https://github.com/KSXia/Verbatim-Read-Doc-Creator-Old
 ' Thanks to Truf for creating and providing the original code for activating invisibility mode! You can find Truf's macros on his website at https://debate-decoded.ghost.io/leveling-up-verbatim/
 
 ' Sub procedure 1 of 6: Read Doc Creator Core
