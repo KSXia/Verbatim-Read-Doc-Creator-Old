@@ -16,8 +16,8 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	
 	' ---USER CUSTOMIZATION---
 	' <<SET THE STYLES TO DELETE HERE!>>
-	' Add the names of styles that you want to delete to this list in the StylesToDelete array. Make sure that the name of the style is in quotation marks and that each term is separated by commas.
-	' If the list is empty, the macro will still work, but no styles will be deleted.
+	' Add the names of styles that you want to delete to the list in the StylesToDelete array. Make sure that the name of the style is in quotation marks and that each term is separated by commas.
+	' If the list is empty, this macro will still work, but no styles will be deleted.
 	StylesToDelete = Array("Undertag")
 	
 	' <<SET WHETHER TO DELETE HIGHLIGHTING FOR "For Reference" CARDS HERE!>>
