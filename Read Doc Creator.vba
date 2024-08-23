@@ -7,6 +7,7 @@
 
 ' Sub procedure 1 of 6: Read Doc Creator Core
 Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode As Boolean)
+	Dim DeleteStyles As Boolean
 	Dim StylesToDelete() As Variant
 	Dim DeleteForReferenceHighlightingInInvisibilityMode As Boolean
 	Dim DeleteForReferenceCardHighlightingInNormalMode As Boolean
@@ -17,6 +18,10 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	' Add the names of styles that you want to delete to the list in the StylesToDelete array. Make sure that the name of the style is in quotation marks and that each term is separated by commas!
 	' If the list is empty, this macro will still work, but no styles will be deleted.
 	StylesToDelete = Array("Undertag")
+	
+	' If DeleteStyles is set to True, the styles listed in the StylesToDelete array will be deleted. If DeleteStyles is set to False, the styles listed in the StylesToDelete array will not be deleted.
+	' If you want to disable the deletion of the styles listed in the StylesToDelete array, set DeleteStyles to False.
+	DeleteStyles = True
 	
 	' <<SET WHETHER TO DELETE HIGHLIGHTED TEXT IN "For Reference" CARDS HERE!>>
 	' If DeleteForReferenceCardsForInvisibilityMode is set to True, text highlighted in your "For Reference" highlighting color (which is set in the ForReferenceHighlightingColor option below) will be deleted when the read doc is set to have invisibility mode activated.
@@ -70,30 +75,32 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	On Error Resume Next
 	
 	' ---STYLE DELETION---
-	Dim CurrentStyleToDeleteIndex As Integer
-	For CurrentStyleToDeleteIndex = 0 To GreatestStyleIndex Step 1
-		Dim StyleToDelete As Style
-		
+	If DeleteStyles = True Then
+		Dim CurrentStyleToDeleteIndex As Integer
+		For CurrentStyleToDeleteIndex = 0 To GreatestStyleIndex Step 1
+			Dim StyleToDelete As Style
+			
 		' Specify the style to be deleted and delete it
-		Set StyleToDelete = ReadDoc.Styles(StylesToDelete(CurrentStyleToDeleteIndex))
-		
-		' Use Find and Replace to remove text with the specified style and delete it
-		With ReadDoc.Content.Find
-			.ClearFormatting
-			.Style = StyleToDelete
-			.Replacement.ClearFormatting
-			.Replacement.Text = ""
-			.Format = True
-			' Disable checks in the find process for optimization
-			.MatchCase = False
-			.MatchWholeWord = False
-			.MatchWildcards = False
-			.MatchSoundsLike = False
-			.MatchAllWordForms = False
-			' Delete all text with the style to delete
-			.Execute Replace:=wdReplaceAll, Forward:=True, Wrap:=wdFindContinue
-		End With
-	Next CurrentStyleToDeleteIndex
+			Set StyleToDelete = ReadDoc.Styles(StylesToDelete(CurrentStyleToDeleteIndex))
+			
+			' Use Find and Replace to remove text with the specified style and delete it
+			With ReadDoc.Content.Find
+				.ClearFormatting
+				.Style = StyleToDelete
+				.Replacement.ClearFormatting
+				.Replacement.Text = ""
+				.Format = True
+				' Disable checks in the find process for optimization
+				.MatchCase = False
+				.MatchWholeWord = False
+				.MatchWildcards = False
+				.MatchSoundsLike = False
+				.MatchAllWordForms = False
+				' Delete all text with the style to delete
+				.Execute Replace:=wdReplaceAll, Forward:=True, Wrap:=wdFindContinue
+			End With
+		Next CurrentStyleToDeleteIndex
+	End If
 	
 	' ---POST STYLE DELETION PROCESSES---
 	' Re-enable error prompts
