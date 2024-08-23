@@ -1,4 +1,4 @@
-' ---Read Doc Creator v1.0.6---
+' ---Read Doc Creator v1.0.5---
 ' Updated on 2024-08-23.
 ' Automatic Saving Edition: This edition of the Read Doc Creator only creates the read doc and automatically saves the read doc.
 ' WARNING: This edition of the Read Doc Creator has LIMITED COMPATIBILITY! It might not work on MacOS.
