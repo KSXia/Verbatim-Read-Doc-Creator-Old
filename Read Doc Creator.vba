@@ -65,7 +65,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	' ---VARIABLE SETUP---
 	Dim ReadDoc As Document
 	
-	' If the doc has been previously saved, create a copy of it to be the send doc
+	' If the doc has been previously saved, create a copy of it to be the read doc
 	Set ReadDoc = Documents.Add(OriginalDoc.FullName)
 	
 	Dim GreatestStyleIndex As Integer
