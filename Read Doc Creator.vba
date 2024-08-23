@@ -1,6 +1,7 @@
 ' ---Read Doc Creator v1.0.2---
 ' Updated on 2024-08-23.
 ' Automatic Saving Edition: This edition of the Read Doc Creator only creates the read doc and automatically saves the read doc.
+' WARNING: This edition of the Read Doc Creator has LIMITED COMPATIBILITY! It might not work on MacOS.
 ' This macro consists of 6 sub procedures.
 ' https://github.com/KSXia/Verbatim-Read-Doc-Creator-Old
 ' Thanks to Truf for creating and providing the original code for activating invisibility mode! You can find Truf's macros on his website at https://debate-decoded.ghost.io/leveling-up-verbatim/
