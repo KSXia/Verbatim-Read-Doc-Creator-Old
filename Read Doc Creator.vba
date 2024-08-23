@@ -13,7 +13,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	Dim DeleteForReferenceCardHighlightingInNormalMode As Boolean
 	Dim ForReferenceHighlightingColor As String
 	
-	Dim AutomaticallyCloseReadDoc As Boolean
+	Dim AutomaticallyCloseSavedReadDoc As Boolean
 	
 	' ---USER CUSTOMIZATION---
 	' <<SET THE STYLES TO DELETE HERE!>>
@@ -43,8 +43,8 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	ForReferenceHighlightingColor = "Light Gray"
 	
 	' <<SET WHETHER TO AUTOMATICALLY CLOSE THE READ DOC AFTER IT IS SAVED HERE!>>
-	' If AutomaticallyCloseReadDoc is set to True, the read doc will be automatically closed after it is saved.
-	AutomaticallyCloseReadDoc = False
+	' If AutomaticallyCloseSavedReadDoc is set to True, the read doc will be automatically closed after it is saved.
+	AutomaticallyCloseSavedReadDoc = False
 	
 	' ---INITIAL VARIABLE SETUP---
 	Dim OriginalDoc As Document
@@ -131,7 +131,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	SavePath = OriginalDoc.Path & "\" & Left(OriginalDocName, Len(OriginalDocName) - 5) & " [R]" & ".docx"
 	ReadDoc.SaveAs2 Filename:=SavePath, FileFormat:=wdFormatDocumentDefault
 	
-	If AutomaticallyCloseReadDoc Then
+	If AutomaticallyCloseSavedReadDoc Then
 		ReadDoc.Close SaveChanges:=wdSaveChanges
 		MsgBox "The read doc is saved at " & SavePath, Title="Successfully Created and Saved Read Doc"
 	End If
