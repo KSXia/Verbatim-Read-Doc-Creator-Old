@@ -12,7 +12,6 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	Dim DeleteForReferenceHighlightingInInvisibilityMode As Boolean
 	Dim DeleteForReferenceCardHighlightingInNormalMode As Boolean
 	Dim ForReferenceHighlightingColor As String
-	
 	Dim AutomaticallyCloseSavedReadDoc As Boolean
 	
 	' ---USER CUSTOMIZATION---
