@@ -1,5 +1,8 @@
 # Verbatim Read Doc Creator
 
+## Newer Versions
+Newer versions of this macro (starting from v2.0.0) can be found in [this repository](https://github.com/KSXia/Verbatim-Read-Doc-Creator).
+
 ## Features
 * All editions will delete styles named `Undertag` by default.
 * The style(s) to be deleted by the macro can be customized in the `User Customization` section of the macro code.
