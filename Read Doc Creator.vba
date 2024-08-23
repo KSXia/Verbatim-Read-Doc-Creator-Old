@@ -20,10 +20,10 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	' If the list is empty, this macro will still work, but no styles will be deleted.
 	StylesToDelete = Array("Undertag")
 	
-	' <<SET WHETHER TO DELETE HIGHLIGHTING FOR "For Reference" CARDS HERE!>>
-	' If DeleteForReferenceCardsForInvisibilityMode is set to True, highlighting for "For Reference" cards will be deleted when the read doc is set to have invisibility mode activated.
+	' <<SET WHETHER TO DELETE HIGHLIGHTED TEXT IN "For Reference" CARDS HERE!>>
+	' If DeleteForReferenceCardsForInvisibilityMode is set to True, text highlighted in your "For Reference" highlighting color will be deleted when the read doc is set to have invisibility mode activated.
 	DeleteForReferenceHighlightingInInvisibilityMode = False
-	' If DeleteForReferenceCardsForNormalMode is set to True, highlighting for "For Reference" cards will be deleted when the read doc is not set to have invisibility mode activated.
+	' If DeleteForReferenceCardsForNormalMode is set to True, text highlighted in your "For Reference" highlighting color will be deleted when the read doc is not set to have invisibility mode activated.
 	DeleteForReferenceCardHighlightingInNormalMode = False
 	
 	' <<SET THE COLOR YOU USE FOR "For Reference" CARDS HERE!>>
