@@ -337,7 +337,7 @@ Sub DeleteForReferenceCardHighlighting(Doc As Document, ForReferenceHighlighting
 			.Forward = True
 			.Wrap = wdFindStop
 			End With
-			' Delete all text with the reference highlighting color
+			' Delete all text with the "For Reference" highlighting color
 			Do While .Find.Execute = True
 				If .HighlightColorIndex = ForReferenceHighlightingColorEnum Then .Delete
 			Loop
