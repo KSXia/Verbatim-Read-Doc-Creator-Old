@@ -76,12 +76,12 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	On Error Resume Next
 	
 	' ---STYLE DELETION---
-	Dim CurrentStyleIndex As Integer
-	For CurrentStyleIndex = 0 To GreatestStyleIndex Step 1
+	Dim CurrentStyleToDeleteIndex As Integer
+	For CurrentStyleToDeleteIndex = 0 To GreatestStyleIndex Step 1
 		Dim StyleToDelete As Style
 		
 		' Specify the style to be deleted and delete it
-		Set StyleToDelete = ReadDoc.Styles(StylesToDelete(CurrentStyleIndex))
+		Set StyleToDelete = ReadDoc.Styles(StylesToDelete(CurrentStyleToDeleteIndex))
 		
 		' Use Find and Replace to remove text with the specified style and delete it
 		With ReadDoc.Content.Find
@@ -99,7 +99,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 			' Delete all text with the style to delete
 			.Execute Replace:=wdReplaceAll, Forward:=True, Wrap:=wdFindContinue
 		End With
-	Next CurrentStyleIndex
+	Next CurrentStyleToDeleteIndex
 	
 	' ---POST STYLE DELETION PROCESSES---
 	' Re-enable error prompts
