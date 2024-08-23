@@ -1,4 +1,4 @@
-' ---Read Doc Creator v1.0.4---
+' ---Read Doc Creator v1.0.5---
 ' Updated on 2024-08-23.
 ' Title Copier Edition: This edition of the Read Doc Creator creates the read doc and copies the formatted name of the read doc into the clipboard, but it does not automatically save the read doc.
 ' This macro consists of 6 sub procedures.
