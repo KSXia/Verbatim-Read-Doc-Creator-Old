@@ -2,7 +2,7 @@
 ' Updated on 2024-08-23.
 ' Title Copier Edition: This edition of the Read Doc Creator creates the read doc and copies the formatted name of the read doc into the clipboard, but it does not automatically save the read doc.
 ' This macro consists of 6 sub procedures.
-' https://github.com/KSXia/Verbatim-Read-Doc-Creator/tree/Title-Copier-Edition
+' https://github.com/KSXia/Verbatim-Read-Doc-Creator-Old
 ' Thanks to Truf for creating and providing the original code for activating invisibility mode! You can find Truf's macros on his website at https://debate-decoded.ghost.io/leveling-up-verbatim/
 
 ' Sub procedure 1 of 6: Read Doc Creator Core
