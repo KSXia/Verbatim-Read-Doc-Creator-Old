@@ -42,8 +42,8 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	' MAKE SURE TO USE THIS EXACT CAPITALIZATION AND SPELLING!
 	ForReferenceHighlightingColor = "Light Gray"
 	
-	' <<SET WHETHER TO AUTOMATICALLY CLOSE THE READ DOC AFTER IT'S CREATED AND SAVED HERE!>>
-	' If AutomaticallyCloseReadDoc is set to True, the read doc will be automatically closed after it is created and saved.
+	' <<SET WHETHER TO AUTOMATICALLY CLOSE THE READ DOC AFTER IT IS SAVED HERE!>>
+	' If AutomaticallyCloseReadDoc is set to True, the read doc will be automatically closed after it is saved.
 	AutomaticallyCloseReadDoc = False
 	
 	' ---INITIAL VARIABLE SETUP---
