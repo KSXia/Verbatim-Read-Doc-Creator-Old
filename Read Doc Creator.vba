@@ -1,4 +1,4 @@
-' ---Read Doc Creator v1.0.2---
+' ---Read Doc Creator v1.0.3---
 ' Updated on 2024-08-23.
 ' Basic Edition: This edition of the Read Doc Creator only creates the read doc and does not have any mechanisms regarding the saving of the read doc.
 ' This macro consists of 6 sub procedures.
