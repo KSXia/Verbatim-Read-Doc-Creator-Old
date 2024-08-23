@@ -321,7 +321,7 @@ Sub DeleteForReferenceCardHighlighting(Doc As Document, ForReferenceHighlighting
 			.MatchWildcards = False
 			.MatchSoundsLike = False
 			.MatchAllWordForms = False
-			' Modifying the search process settings
+			' Modify the search process settings
 			.Forward = True
 			.Wrap = wdFindStop
 			End With
