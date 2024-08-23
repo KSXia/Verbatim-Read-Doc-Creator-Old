@@ -27,8 +27,8 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	DeleteForReferenceCardHighlightingInNormalMode = False
 	
 	' <<SET THE COLOR YOU USE FOR "For Reference" CARDS HERE!>>
-	' Set the highlighting color you use for "For Reference" cards here.
-	' WARNING: This highlighting color MUST ONLY be used for "For Reference" cards and nothing that you are reading! If this is not the case, DISABLE the function to delete highlighting for "For Reference" cards.
+	' Set ForReferenceHighlightingColor to the name of the highlighting color you use for "For Reference" cards.
+	' WARNING: This highlighting color MUST ONLY be used for "For Reference" cards and nothing that you are reading! If this is not the case, DISABLE the function to delete highlighting for "For Reference" cards by setting DeleteForReferenceHighlightingInInvisibilityMode and DeleteForReferenceCardHighlightingInNormalMode to False.
 	'
 	' These are the names of the highlighting colors in the each row of the highlighting color selection menu, listed from left to right:
 	' First row: Yellow, Bright Green, Turquoise, Pink, Blue
