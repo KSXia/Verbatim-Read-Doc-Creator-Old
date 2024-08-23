@@ -1,5 +1,5 @@
-' ---Read Doc Creator v1.0.1---
-' Created on 2024-08-21.
+' ---Read Doc Creator v1.0.0---
+' Created on 2024-08-16.
 ' Automatic Saving Edition: This edition of the Read Doc Creator only creates the read doc and automatically saves the read doc.
 ' This macro consists of 6 sub procedures.
 ' https://github.com/KSXia/Verbatim-Read-Doc-Creator/tree/Automatic-Saving-Edition
