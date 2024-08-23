@@ -14,6 +14,8 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	Dim DeleteForReferenceHighlightingInInvisibilityMode As Boolean
 	Dim DeleteForReferenceCardHighlightingInNormalMode As Boolean
 	Dim ForReferenceHighlightingColor As String
+	Dim ReadDocNamePrefix As String
+	Dim ReadDocNameSuffix As String
 	
 	' ---USER CUSTOMIZATION---
 	' <<SET THE STYLES TO DELETE HERE!>>
@@ -52,7 +54,26 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	' MAKE SURE TO USE THIS EXACT CAPITALIZATION AND SPELLING!
 	ForReferenceHighlightingColor = "Light Gray"
 	
-	' ---INITIAL VARIABLE SETUP---
+	' <<SET HOW THE READ DOC IS NAMED HERE!>>
+	' Set ReadDocNamePrefix to the prefix you want to add to the read doc name.
+	' Make sure there are quotation marks around the prefix you want to insert into the read doc name!
+	' If you do not want to insert a prefix into the read doc name, put nothing in-between the quotation marks. If you do this, you MUST have a suffix for the read doc name.
+	ReadDocNamePrefix = ""
+	
+	' Set ReadDocNameSuffix to the suffix you want to add to the read doc name.
+	' Make sure there are quotation marks around the suffix you want to insert into the read doc name!
+	' If you do not want to insert a suffix into the read doc name, put nothing in-between the quotation marks. If you do this, you MUST have a prefix for the read doc name.
+	ReadDocNameSuffix = " [R]"
+	
+	' ---CHECK VALIDITY OF USER CONFIGURATION---
+	' Check if there is either a prefix or suffix for the read doc name
+	If ReadDocNamePrefix = "" And ReadDocNameSuffix = "" Then
+		' If there is neither a prefix nor suffix for the read doc name:
+		MsgBox "You have not set a suffix or prefix to add to the read doc name. Please set one in the macro settings and try again.", Title:="Error in Creating Read Doc"
+		Exit Sub
+	End If
+	
+	' ---INITIAL VARIABLE SETUP---	
 	Dim OriginalDoc As Document
 	' Assign the original document to a variable
 	Set OriginalDoc = ActiveDocument
@@ -203,7 +224,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 	
 	' Set a variable to be the name of the read doc
 	Dim ReadDocName As String
-	ReadDocName = Left(OriginalDocName, Len(OriginalDocName) - 5) & " [R]"
+	ReadDocName = ReadDocNamePrefix & Left(OriginalDocName, Len(OriginalDocName) - 5) & ReadDocNameSuffix
 	
 	' Put the formatted name of the read doc into the clipboard
 	Set ClipboardText = New DataObject
