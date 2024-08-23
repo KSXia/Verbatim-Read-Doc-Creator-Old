@@ -84,7 +84,7 @@ Sub CreateReadDoc(EnableInvisibilityMode As Boolean, EnableFastInvisibilityMode 
 			.Replacement.ClearFormatting
 			.Replacement.Text = ""
 			.Format = True
-			' Disabling checks in the find process for optimization
+			' Disable checks in the find process for optimization
 			.MatchCase = False
 			.MatchWholeWord = False
 			.MatchWildcards = False
@@ -327,7 +327,7 @@ Sub DeleteForReferenceCardHighlighting(Doc As Document, ForReferenceHighlighting
 			.Replacement.ClearFormatting
 			.Replacement.Text = ""
 			.Format = True
-			' Disabling checks in the find process for optimization
+			' Disable checks in the find process for optimization
 			.MatchCase = False
 			.MatchWholeWord = False
 			.MatchWildcards = False
