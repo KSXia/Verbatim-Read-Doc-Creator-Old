@@ -417,17 +417,17 @@ Sub DeleteForReferenceCardHighlighting(Doc As Document, ForReferenceHighlighting
 	End With
 End Sub
 
-' Sub procedure 3 of 6: Trigger for Read Doc Creator
+' Sub procedure 4 of 6: Trigger for Read Doc Creator
 Sub CreateNormalReadDoc()
 	Call CreateReadDoc(False, False)
 End Sub
 
-' Sub procedure 4 of 6: Trigger for Read Doc Creator
+' Sub procedure 5 of 6: Trigger for Read Doc Creator
 Sub CreateReadDocWithInvisibilityMode()
 	Call CreateReadDoc(True, False)
 End Sub
 
-' Sub procedure 5 of 6: Trigger for Read Doc Creator
+' Sub procedure 6 of 6: Trigger for Read Doc Creator
 Sub CreateReadDocWithFastInvisibilityMode()
 	Call CreateReadDoc(True, True)
 End Sub
